@@ -1,7 +1,10 @@
 from ultralytics import YOLO
 import cv2
 import time
+'''
+rpicam-hello -t 0s --post-process-file /usr/share/rpi-camera-assets/imx500_mobilenet_ssd.json --viewfinder-width 1920 --viewfinder-height 1080 --framerate 30
 
+'''
 def track_unique_faces(video_source=0, detection_duration=10, output_file="unique_faces_count.txt"):
     # Load YOLOv8 model (you can use a custom model trained for faces)
     model = YOLO("yolov11n-face.pt")  # Use "yolov8n-face.pt" if you have a face-specific model
